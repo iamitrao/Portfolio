@@ -248,6 +248,7 @@ section {
 .name span {
     background: linear-gradient(90deg, #ff3366, #ff9933);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -647,4 +648,60 @@ footer {
     .hamburger {
         display: block;
     }
+}
+
+/* --- Custom Cursor & 3D Background --- */
+body {
+    cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+    cursor: none;
+}
+
+#cursor-dot,
+#cursor-outline {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-red);
+    box-shadow: 0 0 10px var(--accent-red), 0 0 20px var(--accent-red);
+}
+
+#cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 51, 102, 0.5);
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+#cursor-outline.hovering {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 51, 102, 0.1);
+    border-color: rgba(255, 51, 102, 0.8);
+}
+
+#canvas3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.6;
 }
