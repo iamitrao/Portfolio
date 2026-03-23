@@ -15,6 +15,13 @@
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="canvas3d"></canvas>
+
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
@@ -146,8 +153,8 @@
                     <div class="project-info">
                         <span class="badge python">Python</span>
                         <h3>Driver Attention Detection System</h3>
-                        <p>An advanced Computer Vision application using OpenCV, MediaPipe, and Machine Learning models to
-                            detect driver distraction and monitor facial features in real-time.
+                        <p>An advanced Computer Vision application using OpenCV, MediaPipe, and Deep Learning models to
+                            detect driver distraction and monitor facial features in real-time. (Deployed Web Version)
                         </p>
                     </div>
                 </article>
@@ -164,8 +171,8 @@
                     <div class="project-info">
                         <span class="badge sql">SQL & Python</span>
                         <h3>E-Commerce Data Analysis</h3>
-                        <p>Complex SQL queries for data extraction paired with Python-based (Pandas,
-                            Numpy) to perform customer segmentation, sales forecasting, and cohort
+                        <p>Complex SQL queries for data extraction paired with Python-based Machine Learning (Pandas,
+                            Scikit-Learn, XGBoost) to perform customer segmentation, sales forecasting, and cohort
                             analysis on large transactional datasets.</p>
                     </div>
                 </article>
@@ -185,6 +192,22 @@
                         <p>Comprehensive SQL-based relational database management system using advanced queries and
                             procedures to handle book tracking, user borrowing history, and automated inventory
                             management for a library.</p>
+                    </div>
+                </article>
+
+                <article class="project-card glass-effect">
+                    <div class="project-image">
+                        <img src="sql_project.png" alt="SQL Data Analytics Case Studies"
+                            onerror="this.src='https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=600'">
+                        <div class="project-overlay">
+                            <a href="https://github.com/iamitrao/sql-data-analytics-case-studies" target="_blank"
+                                class="btn btn-small"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="badge sql">SQL</span>
+                        <h3>SQL Data Analytics Case Studies</h3>
+                        <p>A collection of real-world data analytics case studies solved using complex SQL queries for data extraction, transformation, and insight generation.</p>
                     </div>
                 </article>
 
@@ -277,6 +300,7 @@
         <p>&copy; 2026 Amit Kumar. Built with precision and passion.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 
